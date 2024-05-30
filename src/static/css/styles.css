@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-image: url('/static/Images/background2.webp');
+    background-size: cover;
+    background-position: center 10%;
+    background-attachment: fixed; /* Fija el fondo */
+}
+
+#title-image-container {
+    margin-top: 10px; /* Ajusta según sea necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-image {
+    max-width: 20%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto;
+}
+
+#search-section {
+    margin-top: 100px; /* Ajusta la barra de búsqueda más hacia el centro verticalmente */
+}
+
+#search-section.active {
+    margin-top: 100px; /* Menor margen para subir la barra de búsqueda */
+}
+
+#search-box {
+    width: 300px;
+    height: 30px; /* Mayor altura para mejor visibilidad */
+    font-size: 16px; /* Tamaño de letra más grande para facilidad de lectura */
+    border: 2px solid #ffcb05; /* Borde amarillo, color típico de Pikachu */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 5px;
+}
+
+button {
+    background-color: #ffcb05; /* Fondo amarillo, color típico de Pikachu */
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+button:hover {
+    background-color: #ffdd57; /* Cambia a un amarillo más claro al pasar el mouse */
+}
+
+#random-pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px; /* Ajusta esto según el ancho deseado */
+    margin: auto;
+}
+
+#pokemon-display {
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+#pokemon-display h1, #pokemon-display p, #pokemon-display img, #pokemon-display ul {
+    background: white; /* Fondo blanco para cada elemento */
+    border: 2px solid #ffcb05; /* Borde amarillo, color típico de Pikachu */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px;
+    margin: 10px 0; /* Margen entre elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+}
+
+#pokemon-display img {
+    width: 100%;
+    max-width: 180px; /* Limita el tamaño máximo de la imagen */
+    display: block;
+    margin: 10px auto; /* Centra la imagen horizontalmente */
+}
+
+#pokemon-display ul {
+    list-style-type: none; /* Remueve los bullets de la lista */
+    padding: 0;
+}
+
+#pokemon-display li {
+    margin-bottom: 5px;
+    text-align: left; /* Alineación del texto a la izquierda dentro de la lista */
+}
+
+.pokemon-image {
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+.pokemon-image:hover {
+    transform: scale(1.1);
+}
+
+#back-button {
+    background-color: #ffcb05; /* Fondo amarillo, color típico de Pikachu */
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 20px auto 40px; /* Ajusta el margen inferior para que esté un poco más arriba */
+    display: block; /* Centra el botón en la página */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#back-button:hover {
+    background-color: #ffdd57; /* Cambia a un amarillo más claro al pasar el mouse */
+}
+
+#pokemon-display-container {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px; /* Ajusta este valor según sea necesario */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px); /* Resta la altura del botón de volver */
+    overflow-y: auto; /* Agrega desplazamiento vertical si es necesario */
+    scrollbar-width: none; /* Para Firefox */
+}
+
+.container::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento de WebKit */
+}
+
+.center {
+    text-align: center;
+}
+
+#pokemon-display p:empty {
+    display: none;
+}
+
+#pokemon-display table {
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    width: 100%; /* Asegura que la tabla use todo el espacio disponible */
+    max-width: 600px; /* Ajusta el tamaño máximo de la tabla */
+}
